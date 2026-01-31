@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GainNote</title>
+</head>
+<body><div class="header">
+    <header>
+        
+        <h1><img  id="logo" src="logo-GainNote.png" alt="Logo do GainNote" class="logo">GainNote</h1>
+
+</div>
+    <div class="lucro" >Lucro do dia: R$
+<span id="mostrar-lucro"></span>
+    </div>
+
+    
+    </header>
+
+    
+    <div class="conteiner">
+        <input class="form"  type="text" id="nome" placeholder="Cliente" required> 
+<div class="seleção">
+        <select class="item"  name="tipo" id="tipo" required>
+            <option value=""hidden>serviço</option>
+            <option id="completo" value="75">Completo </option>
+            <option id="simples" value="35">Corte</option>
+            <option id="barba" value="20">Barba</option>
+        </select>
+        <select class="item" name="horario" id="horario" required>
+            <option value="" hidden>horário</option>
+
+            <option value="08:00">07:00</option>
+            <option value="09:00">08:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+        </select>
+        
+        <input id="data" class="item" type="date">
+    </div>
+    <div>
+       
+    </div>
+
+        <button id="adicionar" onclick="Listar()">Adicionar</button>
+
+        <br>
+
+    </div>
+    <div class="lista">
+        <ul id="lista">
+            <li></li>
+        </ul>
+    </div>
+    
+    
+
+
+<script src="script.js"></script>
+</body>
+</html>

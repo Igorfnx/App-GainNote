@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(1, 1, 37);
+    color: white;
+    
+}
+.header {
+    .logo{
+        margin-right: 5px;
+    }
+
+    display: flex;
+    background-color: rgb(2, 12, 46);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgb(0, 1, 15);
+    margin: 20px;
+    border-radius: 5px;
+}
+.lucro {
+    box-shadow: 0 2px 4px rgb(0, 1, 15);
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(2, 12, 46);
+    font-size: 20px;
+    margin: 20px;
+    text-align: left;
+}
+.conteiner {
+    
+    background-color:  rgb(2, 12, 46);
+    padding: 20px;
+    margin: auto;
+    height: 165px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    .form {
+        outline: none;
+        width: 80%;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .seleção {
+        outline: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 80%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+
+    }
+    #adicionar {
+        background-color: rgb(1, 5, 24);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #adicionar:hover {
+        background-color: rgb(35, 35, 37);
+    }
+    #adicionar:active {
+        transform: scale(0.98);
+    }
+}
+.lista {
+    li{
+        gap: 10px;
+    background-color:  rgb(2, 12, 46);
+    padding: 20px;
+    margin: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+li:hover {
+    background-color: rgb(1, 9, 34);
+    li.feito {
+        opacity: 0.5;
+    }
+    
+
+}
+
+}
+
+
+.feito {
+    text-decoration: line-through;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
