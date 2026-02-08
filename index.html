@@ -8,8 +8,20 @@
 </head>
 <body><div class="header">
     <header>
-        
-        <h1><img  id="logo" src="logo-GainNote.png" alt="Logo do GainNote" class="logo">GainNote</h1>
+        <div class="menu">
+  <button class="menu" onclick="toggleLeque()">
+    <img src="img/engrenagem-cinza.png" class="menu-icon">
+  </button>
+
+  <div class="leque">
+    <button class="item">⚙️</button>
+    <button class="item">📅</button>
+    <button class="item">📊</button>
+    <button class="item">🚪</button>
+  </div>
+</div>
+
+        <h1><img  id="logo" src="img/logo-GainNote.png" alt="Logo do GainNote" class="logo">GainNote</h1>
 
 </div>
     <div class="lucro" >Lucro do dia: R$
@@ -29,24 +41,12 @@
             <option id="simples" value="35">Corte</option>
             <option id="barba" value="20">Barba</option>
         </select>
-        <select class="item" name="horario" id="horario" required>
-            <option value="" hidden>horário</option>
-
-            <option value="08:00">07:00</option>
-            <option value="09:00">08:00</option>
-            <option value="10:00">10:00</option>
-            <option value="11:00">11:00</option>
-            <option value="14:00">14:00</option>
-            <option value="15:00">15:00</option>
-            <option value="16:00">16:00</option>
-            <option value="17:00">17:00</option>
-            <option value="18:00">18:00</option>
-            <option value="19:00">19:00</option>
-            <option value="20:00">20:00</option>
-        </select>
+        <input  class="item" type="time" id="horario" required>
+           
         
-        <input id="data" class="item" type="date">
+        <input id="data" class="item" type="date" required >
     </div>
+    
     <div>
        
     </div>

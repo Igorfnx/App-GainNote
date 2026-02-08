@@ -36,7 +36,9 @@ function Listar() {
     let cliente = document.getElementById("nome").value;
     let serviço = select.options[select.selectedIndex].text;
     let horario = document.getElementById("horario").value;
-    let Data = document.getElementById("data").value;
+
+    //formatar a data ⬇️
+    let Data = formatData(document.getElementById("data").value);
     
     let listar = cliente + " - " + serviço + " - " + horario + " - " + Data ;
 
@@ -44,7 +46,7 @@ function Listar() {
     lista.push(listar);
      Calcular();
      Mostrar();
- 
+    
     
 }
 function Calcular() {
@@ -60,4 +62,19 @@ function Calcular() {
     document.getElementById("mostrar-lucro").innerHTML = total + ",00";
 
     
+}
+
+//formatar a data para o formato brasileiro
+function formatData(data){
+    // o split separa a string em partes, usando o "-" como separador
+    let partes = data.split("-");
+    // o return junta as partes na ordem desejada, usando "/" como separador, no caso isso vira uma array com 3 partes: [0] = ano, [1] = mês, [2] = dia.
+    return partes[2] + "/" + partes[1] + "/" + partes[0];
+} 
+/*function menurotate(){
+    document.querySelector(".menu").classList.toggle("ativo");
+}*/
+function toggleLeque() {
+    document.querySelector(".leque").classList.toggle("ativo");
+    document.querySelector(".menu-icon").classList.toggle("ativo");
 }

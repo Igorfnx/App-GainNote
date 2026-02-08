@@ -1,35 +1,37 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: rgb(1, 1, 37);
+    background-color: rgb(1, 1, 44);
     color: white;
     
 }
 .header {
-    .logo{
-        margin-right: 5px;
-    }
+   
 
     display: flex;
-    background-color: rgb(2, 12, 46);
+    background-color: rgba(2, 12, 46, 0.5);
     padding: 10px;
     box-shadow: 0 2px 4px rgb(0, 1, 15);
     margin: 20px;
     border-radius: 5px;
+
+     .logo{
+        margin-right: 5px;
+    }
 }
 .lucro {
     box-shadow: 0 2px 4px rgb(0, 1, 15);
     border-radius: 5px;
     width: 50%;
     padding: 10px;
-    background-color: rgb(2, 12, 46);
+    background-color: rgba(2, 12, 46, 0.5);
     font-size: 20px;
     margin: 20px;
     text-align: left;
 }
 .conteiner {
     
-    background-color:  rgb(2, 12, 46);
+    background-color:  rgba(2, 12, 46, 0.5);
     padding: 20px;
     margin: auto;
     height: 165px;
@@ -62,6 +64,16 @@ body {
         font-size: 16px;
 
     }
+    .item{
+        box-shadow: 3px 2px 5px rgb(0, 0, 0);
+        background-color: rgb(5, 16, 73);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
     #adicionar {
         background-color: rgb(1, 5, 24);
         color: white;
@@ -73,6 +85,8 @@ body {
     }
     #adicionar:hover {
         background-color: rgb(35, 35, 37);
+        transform: scale(1.05);
+        transition: 0.7s;
     }
     #adicionar:active {
         transform: scale(0.98);
@@ -81,7 +95,7 @@ body {
 .lista {
     li{
         gap: 10px;
-    background-color:  rgb(2, 12, 46);
+    background-color:  rgba(2, 12, 46, 0.5);
     padding: 20px;
     margin: auto;
     height: auto;
@@ -93,6 +107,7 @@ body {
     align-items: center;
     gap: 15px;
     cursor: pointer;
+    
 }
 li:hover {
     background-color: rgb(1, 9, 34);
@@ -112,3 +127,91 @@ li:hover {
     transition: opacity 0.5s;
 }
 
+    .menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+
+    position: absolute;
+    right: 10px;
+    top: 95%;
+    transform: translateY(-50%);
+}
+
+/*.menu-icon{
+    transition: transform 0.5s ease;
+}
+
+.menu-icon.ativo {
+   
+    animation: girar 1.5s linear infinite;
+    
+}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+*/
+
+
+
+.leque {
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    transform: translateY(-50%);
+}
+
+.leque .item {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(2, 12, 46);
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+/* Posições do leque */
+.leque.ativo .item:nth-child(1) {
+    transform: translate(20px, -60px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.leque.ativo .item:nth-child(2) {
+    transform: translate(-12px, -50px);
+    opacity: 1;
+    pointer-events: auto;
+    
+    
+}
+
+.leque.ativo .item:nth-child(3) {
+    transform: translate(-25px, -18px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Engrenagem */
+.menu-icon {
+   
+    
+    border-radius: 50%;
+    transition: 0.6s;
+}
+
+.menu-icon.ativo {
+    transform: rotate(360deg);
+}
